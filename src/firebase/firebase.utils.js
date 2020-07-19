@@ -6,6 +6,12 @@ const config = {
   // firebase configs goes here
 };
 
+  if (!userAuth) return;
+  const userRef = firestore.doc(`users/${userAuth.uid}`);
+
+  const snapShot = await userRef.get();
+  if (!snapShot.exists) {
+    const { displayName, email } = userAuth;
 firebase.initializeApp(config);
 
 export const auth = firebase.auth();
