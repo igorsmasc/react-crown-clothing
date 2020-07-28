@@ -3,7 +3,14 @@ import "firebase/firestore";
 import "firebase/auth";
 
 const config = {
-  // firebase configs goes here
+  apiKey: "AIzaSyDqahYfdvumSoHpAOj18fcCW81CJ3h1C-0",
+  authDomain: "malena-db.firebaseapp.com",
+  databaseURL: "https://malena-db.firebaseio.com",
+  projectId: "malena-db",
+  storageBucket: "malena-db.appspot.com",
+  messagingSenderId: "148788078393",
+  appId: "1:148788078393:web:edc5aefd7860c68164eae8",
+  measurementId: "G-XQ6XSS2ZCS",
 };
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
